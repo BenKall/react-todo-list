@@ -12,7 +12,7 @@ export const TodoTask = ({task, index, onDelete}) => {
         </p>
         <div>
           <FontAwesomeIcon className="edit-icon" icon={faPenToSquare}/>
-          <FontAwesomeIcon className="delete-icon" icon={faCheck} onClick={() => onDelete(index)}/>
+          <FontAwesomeIcon className="delete-icon" icon={faCheck} onClick={() => onDelete(task.id)}/>
         </div>
     </div>
   )

@@ -13,10 +13,12 @@ export const Todo = () => {
     console.log(todos);
   }
 
-  const onDelete = (index) => {
+  const onDelete = (id) => {
     const newTodos = [...todos];
-    newTodos.splice(index, 1);
-    setTodos(newTodos)
+    const delTodo = newTodos.filter((value) => {
+      return value.id !== id
+    })
+    setTodos(delTodo)
   }
 
   return (
